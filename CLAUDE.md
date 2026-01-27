@@ -1,5 +1,43 @@
 Follow these instructions carefully and do not deviate from them.
 
+## **MANDATORY:** Session Startup Handshake
+
+**At the START of every session, a startup handshake MUST occur:**
+
+### How It Works:
+1. **User says:** "start", "startup", `/startup`, or similar
+2. **Claude runs:** The `/startup` skill which performs all initialization
+
+### If User Doesn't Initiate:
+If the user's first message is NOT a startup command, Claude MUST respond:
+> "Before we begin, let me run the startup routine to ensure everything is ready. Running `/startup`..."
+
+Then immediately invoke the `/startup` skill.
+
+### What `/startup` Does:
+- Checks and clears port 6006 if blocked
+- Reads `CLAUDE.local.md` for known issues and session notes
+- Reviews recent git history for context
+- Verifies dev environment is ready
+- Reports status summary
+
+**This handshake is NON-NEGOTIABLE. Every session starts this way.**
+
+## Available Skills Reference
+
+For a complete guide on when to use which skill, run `/skills-guide` or see:
+`.claude/commands/skills-guide/skills-guide.md`
+
+### Most Common Skills:
+| Skill | When to Use |
+|-------|-------------|
+| `/startup` | Beginning of every session |
+| `/debug <error>` | When encountering errors |
+| `/git-commit` | When ready to commit changes |
+| `/validate` | Before PRs or deployments |
+| `/ultrathink <problem>` | Complex decisions |
+| `/learn` | End of session to capture learnings |
+
 ## Project Overview & Structure
 
 Comprehensive guide to the folder structure and organization of the project, including all main directories, key files, and their purposes.
