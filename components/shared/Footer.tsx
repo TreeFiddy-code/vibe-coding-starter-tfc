@@ -10,8 +10,8 @@ export const Footer = ({ className }: { className?: string }) => {
   return (
     <LandingFooter
       className={className}
-      title="Mevolut"
-      description="A simpler way to manage your money"
+      title="OmniCart_AI"
+      description="AI-powered autonomous e-commerce optimization"
       withBackground
       withBackgroundGlow={false}
       variant="primary"
@@ -20,13 +20,13 @@ export const Footer = ({ className }: { className?: string }) => {
       logoComponent={
         <div className="flex items-center text-primary-900 dark:text-primary-100 gap-3">
           <Image
-            src="/static/images/logo.png"
-            alt="Mevolut logo"
-            width={200}
-            height={200}
-            className="h-8 w-8 rounded-full"
+            src="/static/images/logo-icon.svg"
+            alt="OmniCart_AI logo"
+            width={32}
+            height={32}
+            className="h-8 w-8"
           />
-          {'Mevolut '}
+          {'OmniCart_AI '}
         </div>
       }
     >

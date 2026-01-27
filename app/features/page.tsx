@@ -9,19 +9,20 @@ export default function Features() {
       <div className="w-full flex flex-col items-center my-12">
         <section className="w-full p-6 container-narrow">
           <h1 className="text-4xl font-semibold leading-tight md:leading-tight max-w-xs sm:max-w-none md:text-6xl fancy-heading">
-            Powerful Features to Simplify Your Finances
+            AI-Powered Features for E-Commerce Excellence
           </h1>
 
           <p className="mt-6 md:text-xl">
-            Discover how Mevolut makes managing your money effortless. From
-            tracking expenses to sending payments, our features are designed to
-            help you stay in control of your financial life with ease.
+            Discover how OmniCart_AI transforms your e-commerce operations with
+            autonomous AI agents. From intelligent inventory management to
+            dynamic pricing optimization, our features are designed to maximize
+            your revenue while minimizing manual work.
           </p>
 
           <p className="mt-6 md:text-xl">
-            Whether you're saving for a goal or sending money to loved ones, our
-            platform offers a seamless and secure experience. Sign up for free
-            today and start simplifying your financial journey.
+            Whether you're scaling a growing store or optimizing enterprise
+            operations, our platform delivers measurable results. Start your
+            free trial today and experience the future of e-commerce automation.
           </p>
         </section>
       </div>

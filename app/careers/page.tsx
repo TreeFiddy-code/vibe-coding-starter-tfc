@@ -9,22 +9,22 @@ export default function Careers() {
       <div className="w-full flex flex-col items-center my-12">
         <section className="w-full p-6 container-narrow">
           <h1 className="text-4xl font-semibold leading-tight md:leading-tight max-w-xs sm:max-w-none md:text-6xl fancy-heading">
-            Join the Mevolut Team
+            Join the OmniCart_AI Team
           </h1>
 
           <p className="mt-6 md:text-xl">
-            At Mevolut, we're on a mission to make personal finance
-            straightforward and accessible for everyone. We're looking for
-            passionate, innovative individuals to help us revolutionize how
-            people manage their money. If you're eager to make an impact and
-            thrive in a dynamic environment, we want to hear from you.
+            At OmniCart_AI, we're on a mission to revolutionize e-commerce with
+            autonomous AI. We're looking for passionate, innovative individuals
+            who want to build the future of intelligent commerce automation. If
+            you thrive on solving complex problems and making real impact, we
+            want to hear from you.
           </p>
 
           <p className="mt-6 md:text-xl">
-            Explore opportunities to grow your career with a company dedicated
-            to safety, simplicity, and customer success. Bring your ideas,
-            skills, and enthusiasm — together, we can build something
-            extraordinary.
+            Explore opportunities to grow your career with a company at the
+            intersection of AI, machine learning, and e-commerce. Bring your
+            ideas, skills, and enthusiasm — together, we're building technology
+            that transforms how businesses operate.
           </p>
         </section>
       </div>

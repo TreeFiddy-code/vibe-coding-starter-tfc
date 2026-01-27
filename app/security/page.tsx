@@ -9,22 +9,21 @@ export default function Security() {
       <div className="w-full flex flex-col items-center my-12">
         <section className="w-full p-6 container-narrow">
           <h1 className="text-4xl font-semibold leading-tight md:leading-tight max-w-xs sm:max-w-none md:text-6xl fancy-heading">
-            Your Security is Our Priority
+            Enterprise-Grade Security
           </h1>
 
           <p className="mt-6 md:text-xl">
-            At Mevolut, we understand that managing your finances requires
-            trust. That’s why we employ industry-leading security measures to
-            protect your personal information and funds. From encrypted
-            transactions to secure data storage, your safety is our top concern.
+            At OmniCart_AI, we understand that your e-commerce data is critical
+            to your business. That's why we employ industry-leading security
+            measures to protect your information. From encrypted API connections
+            to secure data processing, your security is our top priority.
           </p>
 
           <p className="mt-6 md:text-xl">
-            Our platform is designed with your privacy in mind, ensuring that
-            your money and data are always safeguarded. Focus on growing your
-            savings, sending money, and managing expenses with
-            confidence—knowing that security is built into every detail of our
-            service.
+            Our platform is SOC 2 Type II certified and GDPR compliant, ensuring
+            your business meets global compliance requirements. Focus on growing
+            your revenue with AI-powered optimization—knowing that security is
+            built into every layer of our infrastructure.
           </p>
         </section>
       </div>

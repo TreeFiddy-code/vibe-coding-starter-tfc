@@ -13,40 +13,39 @@ export default function FAQ() {
           </h1>
 
           <p className="mt-6 md:text-xl">
-            Welcome to the Mevolut FAQ. Here you'll find answers to the most
-            common questions about managing your money with us.
+            Welcome to the OmniCart_AI FAQ. Here you'll find answers to the most
+            common questions about autonomous e-commerce optimization.
           </p>
 
           <p className="mt-6 md:text-xl">
-            <strong>How do I get started with Mevolut?</strong> Signing up is
-            easy and free! Simply create an account to start tracking your
-            expenses, sending money, and growing your savings securely.
+            <strong>How do I get started with OmniCart_AI?</strong> Getting
+            started is simple. Connect your e-commerce platform, configure your
+            AI agents, and watch as they begin optimizing your operations
+            automatically.
           </p>
 
           <p className="mt-6 md:text-xl">
-            <strong>Is my financial information safe?</strong> Absolutely. We
-            prioritize your security with advanced encryption and security
-            protocols to keep your data safe.
+            <strong>Is my business data secure?</strong> Absolutely. We're SOC 2
+            Type II certified with enterprise-grade encryption and strict data
+            protection protocols.
           </p>
 
           <p className="mt-6 md:text-xl">
-            <strong>Can I use Mevolut on any device?</strong> Yes, our platform
-            is fully responsive and accessible from any device with internet
-            access.
+            <strong>Which platforms does OmniCart_AI support?</strong> We
+            integrate with Shopify, WooCommerce, Magento, BigCommerce, and major
+            marketplaces including Amazon, eBay, and Walmart.
           </p>
 
           <p className="mt-6 md:text-xl">
-            <strong>
-              What features are available to help me manage my money?
-            </strong>{' '}
-            You can track expenses, send and receive money, set savings goals,
-            and view detailed reports to better understand your finances.
+            <strong>What AI agents are available?</strong> Our platform includes
+            agents for inventory optimization, dynamic pricing, customer
+            experience personalization, and predictive analytics.
           </p>
 
           <p className="mt-6 md:text-xl">
-            <strong>How do I contact support?</strong> For assistance, reach out
-            through our support channels inside the app or via email. We're here
-            to help!
+            <strong>How do I contact support?</strong> All plans include email
+            support. Growth and Enterprise plans include dedicated success
+            managers and priority support channels.
           </p>
         </section>
       </div>

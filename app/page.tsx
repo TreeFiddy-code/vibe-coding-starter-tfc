@@ -18,7 +18,17 @@ import { LandingFooterLink } from '@/components/landing';
 import Image from 'next/image';
 import { Button } from '@/components/shared/ui/button';
 import Link from 'next/link';
-import { CreditCard, Lock, Shield, TrendingUp, Users, Zap } from 'lucide-react';
+import {
+  Bot,
+  Brain,
+  LineChart,
+  Package,
+  Shield,
+  ShoppingCart,
+  Sparkles,
+  TrendingUp,
+  Zap,
+} from 'lucide-react';
 
 export default function Page() {
   return (
@@ -26,10 +36,10 @@ export default function Page() {
       <Header className="mb-4" />
 
       <LandingPrimaryImageCtaSection
-        title="A simpler way to manage your money"
-        description="Take charge of your finances with Mevolut. Your money, clear and simple."
-        imageSrc="/static/images/1.jpg"
-        imageAlt="Dashboard Preview"
+        title="Autonomous AI for E-Commerce Excellence"
+        description="Future-proof your online store with OmniCart_AI. Intelligent automation that optimizes inventory, pricing, and customer experience 24/7."
+        imageSrc=""
+        imageAlt="OmniCart_AI Dashboard"
         imagePosition="right"
         imageShadow="hard"
         textPosition="left"
@@ -38,106 +48,72 @@ export default function Page() {
         minHeight={350}
       >
         <Button size="xl" asChild>
-          <Link href="/dashboard">Dashboard</Link>
+          <Link href="/dashboard">Launch Dashboard</Link>
         </Button>
         <Button size="xl" variant="outlinePrimary" asChild>
-          <Link href="/pricing">Pricing</Link>
+          <Link href="/pricing">View Pricing</Link>
         </Button>
         <LandingSocialProof
           className="mt-6 w-full"
           avatarItems={[
             {
-              imageSrc: '/static/images/people/1.webp',
-              name: 'Sarah Johnson',
+              imageSrc: '',
+              name: 'E-Commerce Director',
             },
             {
-              imageSrc: '/static/images/people/2.webp',
-              name: 'Michael Chen',
+              imageSrc: '',
+              name: 'Store Owner',
             },
             {
-              imageSrc: '/static/images/people/3.webp',
-              name: 'Emily Rodriguez',
+              imageSrc: '',
+              name: 'Operations Lead',
             },
           ]}
-          numberOfUsers={1100}
-          suffixText="happy users"
+          numberOfUsers={2500}
+          suffixText="stores optimized"
         />
       </LandingPrimaryImageCtaSection>
 
-      <div className="container-wide p-12 w-full flex flex-wrap items-center justify-center gap-6 dark:invert">
-        <span className="w-full text-center text-sm opacity-70 dark:invert">
-          As seen on
-        </span>
-        <Image
-          src="/static/images/outlets/tech-crunch.svg"
-          alt="TechCrunch"
-          width={300}
-          height={300}
-          className="w-auto h-6"
-        />
-        <Image
-          src="/static/images/outlets/the-new-york-times.svg"
-          alt="The New York Times"
-          width={300}
-          height={300}
-          className="w-auto h-8"
-        />
-        <Image
-          src="/static/images/outlets/cnn.svg"
-          alt="CNN"
-          width={300}
-          height={300}
-          className="w-auto h-7"
-        />
-        <Image
-          src="/static/images/outlets/the-verge.svg"
-          alt="The Verge"
-          width={300}
-          height={300}
-          className="w-auto h-7"
-        />
-      </div>
-
       <LandingFeatureList
         id="features"
-        title="Everything you need to manage your money"
-        description="Simple, powerful tools to help you take control of your finances."
+        title="AI-Powered E-Commerce Automation"
+        description="Harness the power of autonomous AI agents to transform your online business operations."
         featureItems={[
           {
-            title: 'See your spending, simply',
+            title: 'Intelligent Inventory Management',
             description:
-              'Track every transaction automatically. Get instant insights into where your money goes with beautiful, easy-to-understand charts and reports.',
+              'AI agents predict demand, automate reordering, and optimize stock levels across all channels. Never miss a sale due to stockouts again.',
+            icon: <Package className="w-8 h-8" />,
+          },
+          {
+            title: 'Dynamic Pricing Optimization',
+            description:
+              'Real-time price adjustments based on market conditions, competitor analysis, and demand signals. Maximize margins while staying competitive.',
             icon: <TrendingUp className="w-8 h-8" />,
           },
           {
-            title: 'Send and receive money instantly',
+            title: 'Autonomous Customer Experience',
             description:
-              'Transfer money to friends and family in seconds. No fees, no waiting. Just fast, secure payments whenever you need them.',
-            icon: <Zap className="w-8 h-8" />,
+              'AI-driven personalization, smart recommendations, and proactive support that delights customers and drives conversions.',
+            icon: <Sparkles className="w-8 h-8" />,
           },
           {
-            title: 'Save money automatically',
+            title: 'Predictive Analytics Engine',
             description:
-              'Set savings goals and watch your money grow. Our smart algorithms help you save without thinking about it, building your financial future effortlessly.',
-            icon: <CreditCard className="w-8 h-8" />,
+              'Advanced machine learning models forecast trends, identify opportunities, and surface actionable insights before your competitors.',
+            icon: <Brain className="w-8 h-8" />,
           },
           {
-            title: 'Bank-level security',
+            title: 'Multi-Channel Orchestration',
             description:
-              'Your money and data are protected with 256-bit encryption. We use the same security standards as major banks to keep your information safe.',
+              'Seamlessly manage your presence across marketplaces, social commerce, and your own store from a unified AI command center.',
+            icon: <ShoppingCart className="w-8 h-8" />,
+          },
+          {
+            title: 'Enterprise-Grade Security',
+            description:
+              'SOC 2 compliant infrastructure with end-to-end encryption. Your business data is protected with military-grade security protocols.',
             icon: <Shield className="w-8 h-8" />,
-          },
-          {
-            title: 'Multi-account management',
-            description:
-              'Connect all your bank accounts in one place. Get a complete view of your finances and manage everything from a single dashboard.',
-            icon: <Users className="w-8 h-8" />,
-          },
-          {
-            title: 'Privacy guaranteed',
-            description:
-              "We never sell your data. Your financial information stays private and secure. You're in complete control of who sees what.",
-            icon: <Lock className="w-8 h-8" />,
           },
         ]}
         withBackground
@@ -147,17 +123,17 @@ export default function Page() {
       />
 
       <LandingProductSteps
-        title="How it Works"
-        description="Get started with Mevolut in three simple steps. No complicated setup, no hidden fees."
+        title="Deploy AI Agents in Minutes"
+        description="Get your autonomous e-commerce optimization running with three simple steps. No coding required."
         display="grid"
         withBackground={false}
         variant="primary"
       >
         <LandingProductFeature
-          title="1. Sign up in minutes"
-          description="Create your account quickly and securely. Just enter your email, set a password, and you're ready to go. No lengthy forms or waiting periods."
-          imageSrc="/static/images/2.jpg"
-          imageAlt="Sign up process"
+          title="1. Connect Your Store"
+          description="Integrate with Shopify, WooCommerce, Magento, or any major e-commerce platform. Our secure APIs sync your data instantly."
+          imageSrc=""
+          imageAlt="Store connection"
           imagePosition="center"
           imageShadow="soft"
           zoomOnHover
@@ -168,10 +144,10 @@ export default function Page() {
           backgroundGlowVariant="primary"
         />
         <LandingProductFeature
-          title="2. Connect your bank accounts"
-          description="Link your existing bank accounts safely using our secure connection. We support thousands of banks and credit unions across the country."
-          imageSrc="/static/images/3.jpg"
-          imageAlt="Connect banks"
+          title="2. Configure AI Agents"
+          description="Select which autonomous agents to deploy: inventory, pricing, customer experience, or all of them. Customize rules and guardrails to match your business."
+          imageSrc=""
+          imageAlt="AI agent configuration"
           imagePosition="center"
           imageShadow="soft"
           zoomOnHover
@@ -182,10 +158,10 @@ export default function Page() {
           backgroundGlowVariant="primary"
         />
         <LandingProductFeature
-          title="3. Start managing your money"
-          description="View all your accounts in one place. Track spending, set budgets, and achieve your financial goals with powerful insights and automation."
-          imageSrc="/static/images/4.jpg"
-          imageAlt="Manage money"
+          title="3. Watch Revenue Grow"
+          description="AI agents work 24/7 optimizing your operations. Monitor performance through real-time dashboards and detailed analytics reports."
+          imageSrc=""
+          imageAlt="Revenue growth"
           imagePosition="center"
           imageShadow="soft"
           zoomOnHover
@@ -199,39 +175,39 @@ export default function Page() {
 
       <LandingProductFeature
         id="security"
-        title="Your money is safe with us"
+        title="Enterprise Security & Compliance"
         descriptionComponent={
           <>
             <p className="mb-6">
-              We take security seriously. Your financial data is protected with
-              industry-leading encryption and security measures.{' '}
+              Built for enterprise requirements from day one. Your data and
+              operations are protected by industry-leading security standards.
             </p>
             <ul className="space-y-3 mb-8">
               <li className="flex items-start">
                 <Shield className="w-5 h-5 mr-3 mt-0.5 flex-shrink-0" />
                 <span>
-                  <strong>256-bit encryption: </strong>
-                  Bank-level security protects all your data
+                  <strong>SOC 2 Type II Certified: </strong>
+                  Audited security controls and processes
                 </span>
               </li>
               <li className="flex items-start">
                 <Shield className="w-5 h-5 mr-3 mt-0.5 flex-shrink-0" />
                 <span>
-                  <strong>FDIC insurance: </strong>
-                  Your deposits are insured up to $250,000
+                  <strong>GDPR & CCPA Compliant: </strong>
+                  Full regulatory compliance for global operations
                 </span>
               </li>
               <li className="flex items-start">
                 <Shield className="w-5 h-5 mr-3 mt-0.5 flex-shrink-0" />
                 <span>
-                  <strong>Privacy guaranteed: </strong>
-                  We never sell your personal information
+                  <strong>99.99% Uptime SLA: </strong>
+                  Enterprise reliability you can count on
                 </span>
               </li>
             </ul>
           </>
         }
-        imageSrc="/static/images/5.jpg"
+        imageSrc=""
         imageAlt="Security features"
         imagePosition="right"
         imageShadow="hard"
@@ -247,75 +223,75 @@ export default function Page() {
 
       <LandingTestimonialReadMoreWrapper>
         <LandingTestimonialGrid
-          title="Loved by thousands of users"
-          description="See what our customers have to say about managing their finances with Mevolut."
+          title="Trusted by Leading E-Commerce Brands"
+          description="See how businesses are transforming their operations with OmniCart_AI autonomous optimization."
           testimonialItems={[
             {
-              name: 'Sarah Anderson',
-              text: 'Mevolut made budgeting so much easier for me. I can finally see where my money goes each month and make smarter decisions about my spending.',
-              handle: '@sarahanderson',
-              imageSrc: '/static/images/people/4.webp',
+              name: 'Jennifer Walsh',
+              text: 'OmniCart_AI reduced our stockouts by 73% in the first month. The AI inventory agents are incredibly accurate at predicting demand.',
+              handle: '@jwalshecom',
+              imageSrc: '',
               url: '#',
               verified: true,
             },
             {
-              name: 'John Bennett',
-              text: "Mevolut helped me finally understand where my money goes each month. Now I feel in control of my finances and I'm actually saving money for the first time.",
-              handle: '@johnbennett',
-              imageSrc: '/static/images/people/5.webp',
+              name: 'Marcus Chen',
+              text: 'The dynamic pricing engine increased our margins by 18% without losing competitiveness. It adapts faster than any human team could.',
+              handle: '@marcuschen',
+              imageSrc: '',
               url: '#',
               verified: true,
             },
             {
-              name: 'Maria Garcia',
-              text: "The automatic savings feature is a game changer. I've saved more in three months with Mevolut than I did all last year trying to do it manually.",
-              handle: '@mariagarcia',
-              imageSrc: '/static/images/people/6.webp',
+              name: 'Sofia Rodriguez',
+              text: 'We went from spending hours on manual optimization to letting AI agents handle everything. Our team now focuses on strategy instead of operations.',
+              handle: '@sofiarodriguez',
+              imageSrc: '',
               url: '#',
             },
             {
-              name: 'David Kim',
-              text: 'I love how simple everything is. No confusing menus or complicated features. Just straightforward money management that actually works.',
-              handle: '@davidkim',
-              imageSrc: '/static/images/people/7.webp',
-              url: '#',
-              verified: true,
-            },
-            {
-              name: 'Emily Rodriguez',
-              text: 'Being able to see all my accounts in one place has been incredible. I finally have a complete picture of my financial situation and can plan accordingly.',
-              handle: '@emilyrodriguez',
-              imageSrc: '/static/images/people/8.webp',
-              url: '#',
-            },
-            {
-              name: 'Michael Thompson',
-              text: "The security features give me peace of mind. I know my financial data is protected and my privacy is respected. That's worth everything to me.",
-              handle: '@michaelthompson',
-              imageSrc: '/static/images/people/9.webp',
+              name: 'David Park',
+              text: 'The multi-channel orchestration is a game changer. Managing inventory across Amazon, Shopify, and our website used to be chaos. Now it runs itself.',
+              handle: '@davidpark',
+              imageSrc: '',
               url: '#',
               verified: true,
             },
             {
-              name: 'Jessica Lee',
-              text: 'Mevolut has completely changed how I think about money. The insights and reports help me make better financial decisions every single day.',
-              handle: '@jessicalee',
-              imageSrc: '/static/images/people/10.webp',
+              name: 'Rachel Thompson',
+              text: 'Customer satisfaction scores jumped 34% after deploying the AI customer experience agents. Personalization at scale actually works now.',
+              handle: '@rachelthompson',
+              imageSrc: '',
               url: '#',
             },
             {
-              name: 'Robert Martinez',
-              text: "I was skeptical at first, but Mevolut has exceeded all my expectations. It's intuitive, powerful, and has genuinely improved my financial health.",
-              handle: '@robertmartinez',
-              imageSrc: '/static/images/people/11.webp',
+              name: 'Alex Kumar',
+              text: 'As a CTO, the enterprise security and compliance features gave me confidence to deploy across our entire operation. SOC 2 compliance was critical for us.',
+              handle: '@alexkumar',
+              imageSrc: '',
               url: '#',
               verified: true,
             },
             {
-              name: 'Amanda Chen',
-              text: 'The instant money transfers are so convenient. I can split bills with friends or send money to family in seconds. No more waiting days for transfers.',
-              handle: '@amandachen',
-              imageSrc: '/static/images/people/12.webp',
+              name: 'Emily Foster',
+              text: 'OmniCart_AI predictive analytics identified a trend shift two weeks before our analysts did. That early warning saved our Q4 planning.',
+              handle: '@emilyfoster',
+              imageSrc: '',
+              url: '#',
+            },
+            {
+              name: 'Michael Santos',
+              text: 'ROI was positive within 6 weeks. The autonomous agents pay for themselves many times over through optimization gains.',
+              handle: '@michaelsantos',
+              imageSrc: '',
+              url: '#',
+              verified: true,
+            },
+            {
+              name: 'Lisa Chang',
+              text: 'Integration was seamless. Connected our Shopify Plus store in under an hour and AI agents were optimizing by end of day. Incredible onboarding.',
+              handle: '@lisachang',
+              imageSrc: '',
               url: '#',
             },
           ]}
@@ -326,52 +302,52 @@ export default function Page() {
 
       <LandingSaleCtaSection
         id="pricing"
-        title="Simple, fair pricing"
-        description="No hidden fees. No surprises. Just transparent pricing that makes sense for everyone."
+        title="Pricing That Scales With You"
+        description="From growing startups to enterprise retailers. Plans designed for every stage of e-commerce growth."
         withBackground
         withBackgroundGlow
         variant="primary"
         backgroundGlowVariant="primary"
       >
         <Button size="xl" asChild>
-          <Link href="/plans">See Plans</Link>
+          <Link href="/pricing">View Plans</Link>
         </Button>
       </LandingSaleCtaSection>
 
       <LandingFaqCollapsibleSection
         id="faq"
         title="Frequently Asked Questions"
-        description="Got questions? We've got answers. Find everything you need to know about Mevolut."
+        description="Everything you need to know about deploying autonomous AI for your e-commerce operations."
         faqItems={[
           {
-            question: 'Is Mevolut free to use?',
+            question: 'What platforms does OmniCart_AI integrate with?',
             answer:
-              'Yes! Mevolut offers a free plan with essential features. We also have premium plans with advanced features for users who need more functionality. There are no hidden fees or surprise charges.',
+              'OmniCart_AI integrates with all major e-commerce platforms including Shopify, Shopify Plus, WooCommerce, Magento, BigCommerce, and custom solutions via our REST API. We also connect with marketplaces like Amazon, eBay, and Walmart.',
           },
           {
-            question: 'How secure is my financial data?',
+            question: 'How do the AI agents make decisions?',
             answer:
-              'Your security is our top priority. We use 256-bit encryption, the same level of security used by major banks. Your data is protected with multiple layers of security, and we never sell your personal information to third parties.',
+              'Our AI agents use advanced machine learning models trained on e-commerce data. You set the rules and guardrails, and agents operate autonomously within those boundaries. All decisions are logged and explainable, and you can override or adjust at any time.',
           },
           {
-            question: 'Which banks can I connect to Mevolut?',
+            question: 'Is my business data secure?',
             answer:
-              'Mevolut supports thousands of banks and credit unions across the United States. We work with all major banks and most regional institutions. If you have questions about a specific bank, please contact our support team.',
+              'Absolutely. OmniCart_AI is SOC 2 Type II certified with end-to-end encryption. We never sell or share your data. Our infrastructure runs on enterprise-grade cloud providers with 99.99% uptime SLA.',
           },
           {
-            question: 'Can I use Mevolut on my phone?',
+            question: 'How quickly can I see results?',
             answer:
-              'Absolutely! Mevolut works seamlessly on all devices including smartphones, tablets, and desktop computers. Access your finances anytime, anywhere with our responsive web app.',
+              'Most customers see measurable improvements within the first two weeks. Inventory optimization and pricing adjustments begin immediately after deployment. Full AI model training for your specific business typically completes within 30 days.',
           },
           {
-            question: 'How does automatic saving work?',
+            question: 'Do I need technical expertise to use OmniCart_AI?',
             answer:
-              "Our smart algorithms analyze your spending patterns and income to automatically set aside small amounts you won't miss. You can customize your savings goals and rules, and we'll handle the rest automatically.",
+              'No coding or technical expertise required. Our platform is designed for business users with intuitive interfaces and guided setup. For custom integrations, our team provides full implementation support.',
           },
           {
-            question: 'What if I need help or have questions?',
+            question: 'What kind of support is available?',
             answer:
-              'Our customer support team is here to help! You can reach us via email, live chat, or phone. We also have a comprehensive help center with guides and tutorials to help you get the most out of Mevolut.',
+              'All plans include email support. Growth and Enterprise plans include dedicated success managers, priority support, and custom onboarding. Enterprise customers get 24/7 phone support and SLA guarantees.',
           },
         ]}
         withBackground={false}
@@ -381,15 +357,15 @@ export default function Page() {
       />
 
       <LandingSaleCtaSection
-        title="Ready to take control? Join Mevolut today."
-        description="Start managing your money smarter. Sign up free and see the difference in minutes."
+        title="Ready to Deploy Autonomous AI?"
+        description="Join thousands of e-commerce businesses optimizing with OmniCart_AI. Start your free trial today."
         withBackground
         withBackgroundGlow
         variant="primary"
         backgroundGlowVariant="primary"
       >
         <Button size="xl" asChild>
-          <Link href="/signup">Sign Up Free</Link>
+          <Link href="/signup">Start Free Trial</Link>
         </Button>
       </LandingSaleCtaSection>
 

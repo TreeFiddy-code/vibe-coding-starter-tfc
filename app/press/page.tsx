@@ -9,22 +9,22 @@ export default function Press() {
       <div className="w-full flex flex-col items-center my-12">
         <section className="w-full p-6 container-narrow">
           <h1 className="text-4xl font-semibold leading-tight md:leading-tight max-w-xs sm:max-w-none md:text-6xl fancy-heading">
-            Mevolut in the News
+            OmniCart_AI in the News
           </h1>
 
           <p className="mt-6 md:text-xl">
-            At Mevolut, we're redefining the way you manage your finances. Our
-            innovative platform simplifies expense tracking, enables seamless
-            money transfers, and helps you grow your savings—all in one secure
-            and user-friendly app. Discover how we're making financial
-            management accessible for everyone.
+            At OmniCart_AI, we're redefining how e-commerce businesses operate
+            with autonomous AI agents. Our innovative platform automates
+            inventory management, pricing optimization, and customer experience
+            personalization—delivering measurable results for businesses of all
+            sizes.
           </p>
 
           <p className="mt-6 md:text-xl">
-            Our commitment is to empower users with safe, simple, and efficient
-            tools to take control of their financial journey. As we continue to
-            grow, we're proud to be recognized for our innovative approach and
-            dedication to customer success.
+            Our commitment is to empower e-commerce businesses with intelligent
+            automation that drives growth. As we continue to innovate, we're
+            proud to be recognized as a leader in the AI-powered commerce
+            revolution.
           </p>
         </section>
       </div>

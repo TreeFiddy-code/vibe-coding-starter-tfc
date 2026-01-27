@@ -159,10 +159,10 @@ export default function DashboardPage() {
             {/* Logo */}
             <div className="flex items-center gap-2 mb-8">
               <div className="w-8 h-8 bg-primary-500 rounded-lg flex items-center justify-center font-semibold text-gray-950 dark:text-gray-950">
-                M
+                O
               </div>
               <span className="text-lg font-medium text-gray-900 dark:text-gray-50">
-                Mevolut
+                OmniCart_AI
               </span>
             </div>
 
