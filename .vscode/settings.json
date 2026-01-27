@@ -3,5 +3,6 @@
   "typescript.enablePromptUseWorkspaceTsdk": true,
   "prettier.configPath": ".prettierrc",
   "claudeCode.preferredLocation": "sidebar",
-  "claudeCode.useCtrlEnterToSend": true
+  "claudeCode.useCtrlEnterToSend": true,
+  "claudeCode.useTerminal": true
 }

@@ -1,18 +1,19 @@
 /* Configure colors at https://shipixen.com/color-theme-explorer-shadcn */
+/* OmniCart_AI: Blue primary, Cyan/Teal secondary */
 const colors = {
   primary: {
-    lighter: '#fde047',
-    light: '#facc15',
-    main: '#eab308',
-    dark: '#ca8a04',
-    darker: '#a16207',
+    lighter: '#DBEAFE',
+    light: '#60A5FA',
+    main: '#3B82F6',
+    dark: '#2563EB',
+    darker: '#1D4ED8',
   },
   secondary: {
-    lighter: '#6ee7b7',
-    light: '#34d399',
-    main: '#10b981',
-    dark: '#059669',
-    darker: '#047857',
+    lighter: '#CFFAFE',
+    light: '#22D3EE',
+    main: '#06B6D4',
+    dark: '#0891B2',
+    darker: '#0E7490',
   },
 };
 

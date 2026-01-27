@@ -65,13 +65,27 @@ export const LandingTestimonial = ({
               : 'mt-6',
           )}
         >
-          <Image
-            width={100}
-            height={100}
-            className="h-10 w-10 flex-none rounded-full bg-gray-50"
-            src={imageSrc}
-            alt=""
-          />
+          {imageSrc ? (
+            <Image
+              width={100}
+              height={100}
+              className="h-10 w-10 flex-none rounded-full bg-gray-50"
+              src={imageSrc}
+              alt=""
+            />
+          ) : (
+            <div
+              className="h-10 w-10 flex-none rounded-full bg-primary-200 flex items-center justify-center text-primary-700 font-medium text-sm"
+              title={name}
+            >
+              {name
+                .split(' ')
+                .map((word) => word[0])
+                .join('')
+                .toUpperCase()
+                .slice(0, 2)}
+            </div>
+          )}
           <div className="flex-auto">
             <div className="font-semibold flex gap-0.5 items-center">
               {name}{' '}
