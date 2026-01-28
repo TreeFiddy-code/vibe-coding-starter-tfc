@@ -34,7 +34,7 @@ const getLogoSize = (dimensions: { width: number; height: number }) => {
 };
 
 export async function GET() {
-  const imagePath = path.join(process.cwd(), '/public/static/images/logo.png');
+  const imagePath = path.join(process.cwd(), '/public/static/images/omnicart-logo.jpg');
   const file = await readFile(imagePath);
   const mimeType = mime.lookup(imagePath);
   const dimensions = sizeOf(file) as { width: number; height: number };

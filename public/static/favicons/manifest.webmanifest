@@ -1,22 +1,22 @@
 {
-  "name": "OmniCart_AI",
+  "name": "OmniCart AI",
   "short_name": "OmniCart",
   "description": "Autonomous E-Commerce Intelligence - AI-powered optimization for inventory, pricing, and customer experience.",
   "start_url": "/",
   "display": "standalone",
-  "background_color": "#ffffff",
-  "theme_color": "#6366f1",
+  "background_color": "#0f172a",
+  "theme_color": "#3b82f6",
   "icons": [
     {
-      "src": "/favicon.svg",
-      "sizes": "any",
-      "type": "image/svg+xml",
+      "src": "/favicon.jpg",
+      "sizes": "512x512",
+      "type": "image/jpeg",
       "purpose": "any"
     },
     {
-      "src": "/static/favicons/favicon.svg",
-      "sizes": "any",
-      "type": "image/svg+xml",
+      "src": "/static/images/omnicart-icon.jpg",
+      "sizes": "512x512",
+      "type": "image/jpeg",
       "purpose": "maskable"
     }
   ],

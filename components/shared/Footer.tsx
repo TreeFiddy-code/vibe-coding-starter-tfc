@@ -10,7 +10,7 @@ export const Footer = ({ className }: { className?: string }) => {
   return (
     <LandingFooter
       className={className}
-      title="OmniCart_AI"
+      title="OmniCart AI"
       description="AI-powered autonomous e-commerce optimization"
       withBackground
       withBackgroundGlow={false}
@@ -18,15 +18,14 @@ export const Footer = ({ className }: { className?: string }) => {
       backgroundGlowVariant="primary"
       withBackgroundGradient
       logoComponent={
-        <div className="flex items-center text-primary-900 dark:text-primary-100 gap-3">
+        <div className="flex items-center">
           <Image
-            src="/static/images/logo-icon.svg"
-            alt="OmniCart_AI logo"
-            width={32}
-            height={32}
-            className="h-8 w-8"
+            src="/static/images/omnicart-logo.jpg"
+            alt="OmniCart AI logo"
+            width={160}
+            height={48}
+            className="h-10 w-auto rounded-lg object-contain"
           />
-          {'OmniCart_AI '}
         </div>
       }
     >

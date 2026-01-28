@@ -1,5 +1,5 @@
 /* Configure colors at https://shipixen.com/color-theme-explorer-shadcn */
-/* OmniCart_AI: Blue primary, Cyan/Teal secondary */
+/* OmniCart AI: Blue primary, Cyan/Teal secondary */
 const colors = {
   primary: {
     lighter: '#DBEAFE',

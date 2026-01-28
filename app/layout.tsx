@@ -8,6 +8,7 @@ import { colors } from '@/data/config/colors.js';
 import '@/css/globals.css';
 import { SearchProvider } from '@/components/shared/SearchProvider';
 import { AnalyticsWrapper } from '@/components/shared/Analytics';
+import { Toaster } from '@/components/shared/ui/sonner';
 
 const displayFont = Nunito_Sans({
   subsets: ['latin'],
@@ -91,19 +92,15 @@ export default function RootLayout({
         `}
         </style>
 
-        <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+        <link rel="icon" type="image/jpeg" href="/favicon.jpg" />
+        <link rel="icon" type="image/jpeg" href="/static/images/omnicart-icon.jpg" />
         <link
           rel="apple-touch-icon"
           sizes="180x180"
-          href="/static/favicons/favicon.svg"
+          href="/static/images/omnicart-icon.jpg"
         />
         <link rel="manifest" href="/static/favicons/manifest.webmanifest" />
-        <link
-          rel="mask-icon"
-          href="/static/favicons/favicon.svg"
-          color="#6366f1"
-        />
-        <meta name="generator" content="OmniCart_AI" />
+        <meta name="generator" content="OmniCart AI" />
         <meta name="msapplication-TileColor" content="#6366f1" />
         <meta
           name="theme-color"
@@ -129,6 +126,7 @@ export default function RootLayout({
               </main>
             </SearchProvider>
           </div>
+          <Toaster />
         </ThemeProviders>
       </body>
     </html>
