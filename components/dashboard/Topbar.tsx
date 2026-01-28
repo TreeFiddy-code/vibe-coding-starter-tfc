@@ -28,12 +28,12 @@ export function Topbar({ activeTab, onTabChange, onMenuClick }: TopbarProps) {
   return (
     <header
       className={clsx(
-        'sticky top-0 z-40 h-16 flex items-center justify-between gap-4 px-4 lg:px-6',
+        'sticky top-0 z-40 h-14 flex items-center justify-between gap-4 px-4 lg:px-6',
         'bg-white/80 dark:bg-slate-950/80 backdrop-blur-sm',
         'border-b border-slate-200 dark:border-gray-800'
       )}
     >
-      {/* Left: Menu button + Brand */}
+      {/* Left: Menu button */}
       <div className="flex items-center gap-4">
         <button
           onClick={onMenuClick}
@@ -41,15 +41,6 @@ export function Topbar({ activeTab, onTabChange, onMenuClick }: TopbarProps) {
         >
           <MenuIcon className="w-5 h-5 text-slate-700 dark:text-slate-300" />
         </button>
-
-        <div className="flex items-center gap-2">
-          <div className="w-8 h-8 bg-primary-500 rounded-lg flex items-center justify-center font-bold text-white text-sm">
-            O
-          </div>
-          <span className="hidden sm:inline text-lg font-semibold text-slate-900 dark:text-gray-100">
-            OmniCart_AI
-          </span>
-        </div>
       </div>
 
       {/* Center: Navigation Tabs */}

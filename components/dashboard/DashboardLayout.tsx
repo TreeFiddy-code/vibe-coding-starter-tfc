@@ -2,6 +2,7 @@
 
 import { useState, ReactNode } from 'react';
 import clsx from 'clsx';
+import Image from 'next/image';
 import { Sidebar } from './Sidebar';
 import { Topbar } from './Topbar';
 
@@ -16,13 +17,12 @@ export function DashboardLayout({ children, title, subtitle }: DashboardLayoutPr
   const [activeTab, setActiveTab] = useState<'dashboard' | 'orders' | 'command'>('dashboard');
 
   return (
-    <div className="min-h-screen bg-slate-100 dark:bg-slate-950 text-slate-900 dark:text-gray-100 transition-colors">
+    <div className="w-full min-h-screen bg-slate-100 dark:bg-slate-950 text-slate-900 dark:text-gray-100 transition-colors">
       <div className="flex">
         {/* Sidebar */}
         <Sidebar
           isOpen={sidebarOpen}
           onClose={() => setSidebarOpen(false)}
-          activePage={activeTab}
         />
 
         {/* Main Area */}
@@ -37,22 +37,36 @@ export function DashboardLayout({ children, title, subtitle }: DashboardLayoutPr
           {/* Page Content */}
           <main className="flex-1 overflow-auto">
             <div className={clsx(
-              'max-w-screen-2xl mx-auto p-4 lg:p-6 xl:p-8',
+              'w-full p-4 lg:p-6 xl:p-8',
               'space-y-4 lg:space-y-6'
             )}>
-              {/* Page Header */}
-              <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-4">
-                <div>
-                  <h1 className="text-xl lg:text-2xl font-bold text-slate-900 dark:text-gray-100">
-                    {title}
-                  </h1>
-                  <p className="text-sm text-slate-600 dark:text-slate-400 mt-1">
-                    {subtitle}
-                  </p>
+              {/* Page Header with Logo */}
+              <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-4">
+                <div className="flex flex-col sm:flex-row sm:items-center gap-4 lg:gap-6">
+                  {/* Large Logo */}
+                  <div className="flex-shrink-0">
+                    <Image
+                      src="/static/images/omnicart-logo.jpg"
+                      alt="OmniCart AI logo"
+                      width={280}
+                      height={80}
+                      className="h-20 sm:h-20 lg:h-24 w-auto rounded-xl object-contain"
+                      priority
+                    />
+                  </div>
+                  {/* Title */}
+                  <div className="min-w-0">
+                    <h1 className="text-lg sm:text-xl lg:text-2xl font-bold text-slate-900 dark:text-gray-100">
+                      {title}
+                    </h1>
+                    <p className="text-sm text-slate-600 dark:text-slate-400 mt-1">
+                      {subtitle}
+                    </p>
+                  </div>
                 </div>
 
                 {/* Hide sensitive toggle */}
-                <div className="flex items-center gap-2">
+                <div className="flex items-center gap-2 flex-shrink-0">
                   <span className="text-sm text-slate-600 dark:text-slate-400">
                     Hide sensitive
                   </span>

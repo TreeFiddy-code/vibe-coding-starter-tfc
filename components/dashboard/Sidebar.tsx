@@ -1,6 +1,8 @@
 'use client';
 
 import { useState } from 'react';
+import { usePathname } from 'next/navigation';
+import Link from 'next/link';
 import clsx from 'clsx';
 import {
   LayoutDashboardIcon,
@@ -25,24 +27,25 @@ import {
   XIcon,
 } from 'lucide-react';
 import { Chip } from './Chip';
-import { workspaceData, sidebarNavigation } from '@/app/dashboard/data';
+import { workspaceData } from '@/app/dashboard/data';
 
 interface SidebarProps {
   isOpen: boolean;
   onClose: () => void;
-  activePage?: 'dashboard' | 'orders' | 'command';
 }
 
 interface NavItemProps {
   icon: React.ComponentType<{ className?: string }>;
   label: string;
+  href: string;
   active?: boolean;
   onClick?: () => void;
 }
 
-function NavItem({ icon: Icon, label, active = false, onClick }: NavItemProps) {
+function NavItem({ icon: Icon, label, href, active = false, onClick }: NavItemProps) {
   return (
-    <button
+    <Link
+      href={href}
       onClick={onClick}
       className={clsx(
         'w-full flex items-center gap-3 h-9 px-3 rounded-lg text-sm font-medium transition-colors',
@@ -53,7 +56,7 @@ function NavItem({ icon: Icon, label, active = false, onClick }: NavItemProps) {
     >
       <Icon className="w-4 h-4 flex-shrink-0" />
       <span className="truncate">{label}</span>
-    </button>
+    </Link>
   );
 }
 
@@ -84,38 +87,38 @@ function NavGroup({ label, children, defaultOpen = true }: NavGroupProps) {
   );
 }
 
-const platformIcons: Record<string, React.ComponentType<{ className?: string }>> = {
-  Amazon: StoreIcon,
-  Shopify: ShoppingCartIcon,
-  eBay: BoxIcon,
-  Social: UsersIcon,
+// Navigation items with their routes
+const navigationItems = {
+  platformHub: [
+    { label: 'Amazon', href: '/dashboard/platforms/amazon', icon: StoreIcon },
+    { label: 'Shopify', href: '/dashboard/platforms/shopify', icon: ShoppingCartIcon },
+    { label: 'eBay', href: '/dashboard/platforms/ebay', icon: BoxIcon },
+    { label: 'Social', href: '/dashboard/platforms/social', icon: UsersIcon },
+  ],
+  management: [
+    { label: 'Product Management', href: '/dashboard/management/products', icon: BoxIcon },
+    { label: 'Supplier Management', href: '/dashboard/management/suppliers', icon: TruckIcon },
+    { label: 'Order Management', href: '/dashboard/management/orders', icon: ShoppingCartIcon },
+  ],
+  commandCenter: [
+    { label: 'Agents', href: '/dashboard/command/agents', icon: BotIcon },
+    { label: 'Workflows', href: '/dashboard/command/workflows', icon: GitBranchIcon },
+    { label: 'Rules', href: '/dashboard/command/rules', icon: ShieldCheckIcon },
+  ],
+  support: [
+    { label: 'Customer Service', href: '/dashboard/support/customer-service', icon: HeadphonesIcon },
+    { label: 'Escalations', href: '/dashboard/support/escalations', icon: AlertTriangleIcon },
+  ],
+  integrations: [
+    { label: 'Integration Portal', href: '/dashboard/integrations', icon: PlugIcon },
+    { label: 'Webhooks', href: '/dashboard/integrations/webhooks', icon: WebhookIcon },
+    { label: 'API Keys', href: '/dashboard/integrations/api-keys', icon: KeyIcon },
+    { label: 'Health', href: '/dashboard/integrations/health', icon: HeartPulseIcon },
+  ],
 };
 
-const managementIcons: Record<string, React.ComponentType<{ className?: string }>> = {
-  'Product Management': BoxIcon,
-  'Supplier Management': TruckIcon,
-  'Order Management': ShoppingCartIcon,
-};
-
-const commandIcons: Record<string, React.ComponentType<{ className?: string }>> = {
-  Agents: BotIcon,
-  Workflows: GitBranchIcon,
-  Rules: ShieldCheckIcon,
-};
-
-const supportIcons: Record<string, React.ComponentType<{ className?: string }>> = {
-  'Customer Service': HeadphonesIcon,
-  Escalations: AlertTriangleIcon,
-};
-
-const integrationIcons: Record<string, React.ComponentType<{ className?: string }>> = {
-  'Integration Portal': PlugIcon,
-  Webhooks: WebhookIcon,
-  'API Keys': KeyIcon,
-  Health: HeartPulseIcon,
-};
-
-export function Sidebar({ isOpen, onClose, activePage = 'dashboard' }: SidebarProps) {
+export function Sidebar({ isOpen, onClose }: SidebarProps) {
+  const pathname = usePathname();
   return (
     <>
       {/* Overlay for mobile */}
@@ -169,61 +172,78 @@ export function Sidebar({ isOpen, onClose, activePage = 'dashboard' }: SidebarPr
             <NavItem
               icon={LayoutDashboardIcon}
               label="Dashboard"
-              active={activePage === 'dashboard'}
+              href="/dashboard"
+              active={pathname === '/dashboard'}
+              onClick={onClose}
             />
           </div>
 
           {/* Platform Hub */}
           <NavGroup label="Platform Hub">
-            {sidebarNavigation.platformHub.map((item) => (
+            {navigationItems.platformHub.map((item) => (
               <NavItem
-                key={item}
-                icon={platformIcons[item] || StoreIcon}
-                label={item}
+                key={item.href}
+                icon={item.icon}
+                label={item.label}
+                href={item.href}
+                active={pathname === item.href}
+                onClick={onClose}
               />
             ))}
           </NavGroup>
 
           {/* Management */}
           <NavGroup label="Management">
-            {sidebarNavigation.management.map((item) => (
+            {navigationItems.management.map((item) => (
               <NavItem
-                key={item}
-                icon={managementIcons[item] || BoxIcon}
-                label={item}
+                key={item.href}
+                icon={item.icon}
+                label={item.label}
+                href={item.href}
+                active={pathname === item.href}
+                onClick={onClose}
               />
             ))}
           </NavGroup>
 
           {/* Command Center */}
           <NavGroup label="Command Center">
-            {sidebarNavigation.commandCenter.map((item) => (
+            {navigationItems.commandCenter.map((item) => (
               <NavItem
-                key={item}
-                icon={commandIcons[item] || TerminalIcon}
-                label={item}
+                key={item.href}
+                icon={item.icon}
+                label={item.label}
+                href={item.href}
+                active={pathname === item.href}
+                onClick={onClose}
               />
             ))}
           </NavGroup>
 
           {/* Support */}
           <NavGroup label="Support">
-            {sidebarNavigation.support.map((item) => (
+            {navigationItems.support.map((item) => (
               <NavItem
-                key={item}
-                icon={supportIcons[item] || HeadphonesIcon}
-                label={item}
+                key={item.href}
+                icon={item.icon}
+                label={item.label}
+                href={item.href}
+                active={pathname === item.href}
+                onClick={onClose}
               />
             ))}
           </NavGroup>
 
           {/* Integrations */}
           <NavGroup label="Integrations" defaultOpen={false}>
-            {sidebarNavigation.integrations.map((item) => (
+            {navigationItems.integrations.map((item) => (
               <NavItem
-                key={item}
-                icon={integrationIcons[item] || PlugIcon}
-                label={item}
+                key={item.href}
+                icon={item.icon}
+                label={item.label}
+                href={item.href}
+                active={pathname === item.href}
+                onClick={onClose}
               />
             ))}
           </NavGroup>
@@ -231,9 +251,15 @@ export function Sidebar({ isOpen, onClose, activePage = 'dashboard' }: SidebarPr
 
         {/* Footer */}
         <div className="p-4 border-t border-slate-200 dark:border-gray-800">
-          <NavItem icon={SettingsIcon} label="Settings" />
+          <NavItem
+            icon={SettingsIcon}
+            label="Settings"
+            href="/dashboard/settings"
+            active={pathname === '/dashboard/settings'}
+            onClick={onClose}
+          />
           <p className="mt-4 px-3 text-xs text-slate-400 dark:text-slate-600">
-            OmniCart_AI v2.1
+            OmniCart AI v2.1
           </p>
         </div>
       </aside>

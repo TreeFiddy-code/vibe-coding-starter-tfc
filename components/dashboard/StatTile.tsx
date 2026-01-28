@@ -1,5 +1,6 @@
 import { ReactNode } from 'react';
 import clsx from 'clsx';
+import { TrendingUpIcon, TrendingDownIcon } from 'lucide-react';
 
 interface StatTileProps {
   label: string;
@@ -7,6 +8,7 @@ interface StatTileProps {
   subLabel?: string;
   icon?: ReactNode;
   variant?: 'default' | 'success' | 'warning' | 'error';
+  trend?: { value: number; direction: 'up' | 'down' };
   className?: string;
 }
 
@@ -23,6 +25,7 @@ export function StatTile({
   subLabel,
   icon,
   variant = 'default',
+  trend,
   className,
 }: StatTileProps) {
   return (
@@ -42,8 +45,27 @@ export function StatTile({
           {label}
         </span>
       </div>
-      <div className={clsx('text-xl font-bold', variantStyles[variant])}>
-        {value}
+      <div className="flex items-center gap-2">
+        <span className={clsx('text-xl font-bold', variantStyles[variant])}>
+          {value}
+        </span>
+        {trend && (
+          <span
+            className={clsx(
+              'flex items-center text-xs font-medium',
+              trend.direction === 'up'
+                ? 'text-emerald-600 dark:text-emerald-400'
+                : 'text-red-600 dark:text-red-400'
+            )}
+          >
+            {trend.direction === 'up' ? (
+              <TrendingUpIcon className="w-3 h-3 mr-0.5" />
+            ) : (
+              <TrendingDownIcon className="w-3 h-3 mr-0.5" />
+            )}
+            {trend.value}%
+          </span>
+        )}
       </div>
       {subLabel && (
         <div className="text-xs text-slate-500 dark:text-slate-500 mt-1">

@@ -1,8 +1,10 @@
 'use client';
 
+import { useRouter } from 'next/navigation';
 import { LinkIcon, BotIcon, ShieldIcon, ChevronRightIcon } from 'lucide-react';
 import { Card, CardHeader, CardSubPanel } from './Card';
 import { quickActions } from '@/app/dashboard/data';
+import { toast } from 'sonner';
 
 const iconMap: Record<string, React.ComponentType<{ className?: string }>> = {
   link: LinkIcon,
@@ -10,17 +12,28 @@ const iconMap: Record<string, React.ComponentType<{ className?: string }>> = {
   shield: ShieldIcon,
 };
 
+const actionRoutes: Record<string, string> = {
+  connect: '/dashboard/integrations',
+  deploy: '/dashboard/command/agents',
+  rules: '/dashboard/command/rules',
+};
+
 interface ActionRowProps {
+  id: string;
   icon: string;
   title: string;
   description: string;
+  onClick: () => void;
 }
 
-function ActionRow({ icon, title, description }: ActionRowProps) {
+function ActionRow({ id, icon, title, description, onClick }: ActionRowProps) {
   const Icon = iconMap[icon] || LinkIcon;
 
   return (
-    <button className="w-full flex items-center gap-4 p-3 rounded-xl hover:bg-slate-50 dark:hover:bg-slate-800/50 transition-colors group text-left">
+    <button
+      onClick={onClick}
+      className="w-full flex items-center gap-4 p-3 rounded-xl hover:bg-slate-50 dark:hover:bg-slate-800/50 transition-colors group text-left"
+    >
       <div className="w-10 h-10 rounded-xl bg-primary-100 dark:bg-primary-900/30 flex items-center justify-center flex-shrink-0">
         <Icon className="w-5 h-5 text-primary-600 dark:text-primary-400" />
       </div>
@@ -38,6 +51,16 @@ function ActionRow({ icon, title, description }: ActionRowProps) {
 }
 
 export function QuickActionsCard() {
+  const router = useRouter();
+
+  const handleAction = (actionId: string, title: string) => {
+    const route = actionRoutes[actionId];
+    if (route) {
+      toast.success(`Navigating to ${title}`);
+      router.push(route);
+    }
+  };
+
   return (
     <Card>
       <CardHeader title="Quick Actions" />
@@ -46,9 +69,11 @@ export function QuickActionsCard() {
         {quickActions.map((action) => (
           <ActionRow
             key={action.id}
+            id={action.id}
             icon={action.icon}
             title={action.title}
             description={action.description}
+            onClick={() => handleAction(action.id, action.title)}
           />
         ))}
       </div>

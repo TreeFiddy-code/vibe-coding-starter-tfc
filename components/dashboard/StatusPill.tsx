@@ -21,6 +21,16 @@ const statusStyles: Record<OperationStatus, { bg: string; text: string; dot: str
     text: 'text-secondary-700 dark:text-secondary-400',
     dot: 'bg-secondary-500',
   },
+  Paid: {
+    bg: 'bg-blue-100 dark:bg-blue-900/30',
+    text: 'text-blue-700 dark:text-blue-400',
+    dot: 'bg-blue-500',
+  },
+  Fulfilled: {
+    bg: 'bg-indigo-100 dark:bg-indigo-900/30',
+    text: 'text-indigo-700 dark:text-indigo-400',
+    dot: 'bg-indigo-500',
+  },
   Shipped: {
     bg: 'bg-emerald-100 dark:bg-emerald-900/30',
     text: 'text-emerald-700 dark:text-emerald-400',
