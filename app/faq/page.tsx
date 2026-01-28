@@ -13,12 +13,12 @@ export default function FAQ() {
           </h1>
 
           <p className="mt-6 md:text-xl">
-            Welcome to the OmniCart_AI FAQ. Here you'll find answers to the most
+            Welcome to the OmniCart AI FAQ. Here you'll find answers to the most
             common questions about autonomous e-commerce optimization.
           </p>
 
           <p className="mt-6 md:text-xl">
-            <strong>How do I get started with OmniCart_AI?</strong> Getting
+            <strong>How do I get started with OmniCart AI?</strong> Getting
             started is simple. Connect your e-commerce platform, configure your
             AI agents, and watch as they begin optimizing your operations
             automatically.
@@ -31,7 +31,7 @@ export default function FAQ() {
           </p>
 
           <p className="mt-6 md:text-xl">
-            <strong>Which platforms does OmniCart_AI support?</strong> We
+            <strong>Which platforms does OmniCart AI support?</strong> We
             integrate with Shopify, WooCommerce, Magento, BigCommerce, and major
             marketplaces including Amazon, eBay, and Walmart.
           </p>

@@ -13,7 +13,7 @@ export default function Help() {
           </h1>
 
           <p className="mt-6 md:text-xl">
-            Welcome to OmniCart_AI's Help Center! We're here to assist you in
+            Welcome to OmniCart AI's Help Center! We're here to assist you in
             getting the most out of your autonomous e-commerce optimization.
             Whether you're new to our platform or looking to unlock advanced
             features, you've come to the right place.
@@ -21,7 +21,7 @@ export default function Help() {
 
           <p className="mt-6 md:text-xl">
             Transforming your e-commerce operations has never been easier. With
-            OmniCart_AI, you can deploy intelligent AI agents that manage
+            OmniCart AI, you can deploy intelligent AI agents that manage
             inventory, optimize pricing, and personalize customer
             experiences—all working 24/7 so you can focus on growing your
             business.

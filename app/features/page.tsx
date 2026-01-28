@@ -13,7 +13,7 @@ export default function Features() {
           </h1>
 
           <p className="mt-6 md:text-xl">
-            Discover how OmniCart_AI transforms your e-commerce operations with
+            Discover how OmniCart AI transforms your e-commerce operations with
             autonomous AI agents. From intelligent inventory management to
             dynamic pricing optimization, our features are designed to maximize
             your revenue while minimizing manual work.

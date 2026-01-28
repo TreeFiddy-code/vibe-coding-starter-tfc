@@ -13,7 +13,7 @@ export default function Status() {
           </h1>
 
           <p className="mt-6 md:text-xl">
-            At OmniCart_AI, we prioritize the availability and reliability of
+            At OmniCart AI, we prioritize the availability and reliability of
             your e-commerce optimization platform. Our system status page
             provides real-time updates on the operational status of our AI
             agents, integrations, and core services. We maintain a 99.99% uptime

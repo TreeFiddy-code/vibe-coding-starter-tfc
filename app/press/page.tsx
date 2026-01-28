@@ -9,11 +9,11 @@ export default function Press() {
       <div className="w-full flex flex-col items-center my-12">
         <section className="w-full p-6 container-narrow">
           <h1 className="text-4xl font-semibold leading-tight md:leading-tight max-w-xs sm:max-w-none md:text-6xl fancy-heading">
-            OmniCart_AI in the News
+            OmniCart AI in the News
           </h1>
 
           <p className="mt-6 md:text-xl">
-            At OmniCart_AI, we're redefining how e-commerce businesses operate
+            At OmniCart AI, we're redefining how e-commerce businesses operate
             with autonomous AI agents. Our innovative platform automates
             inventory management, pricing optimization, and customer experience
             personalization—delivering measurable results for businesses of all

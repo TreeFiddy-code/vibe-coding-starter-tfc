@@ -13,7 +13,7 @@ export default function Security() {
           </h1>
 
           <p className="mt-6 md:text-xl">
-            At OmniCart_AI, we understand that your e-commerce data is critical
+            At OmniCart AI, we understand that your e-commerce data is critical
             to your business. That's why we employ industry-leading security
             measures to protect your information. From encrypted API connections
             to secure data processing, your security is our top priority.

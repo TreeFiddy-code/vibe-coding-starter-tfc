@@ -1,4 +1,4 @@
-// Dashboard sample data for OmniCart_AI
+// Dashboard sample data for OmniCart AI
 
 export const userData = {
   name: 'Avery Chen',
@@ -97,6 +97,8 @@ export type OperationStatus =
   | 'Running'
   | 'Queued'
   | 'Processing'
+  | 'Paid'
+  | 'Fulfilled'
   | 'Shipped'
   | 'Delivered'
   | 'Exception';

@@ -37,9 +37,9 @@ export default function Page() {
 
       <LandingPrimaryImageCtaSection
         title="Autonomous AI for E-Commerce Excellence"
-        description="Future-proof your online store with OmniCart_AI. Intelligent automation that optimizes inventory, pricing, and customer experience 24/7."
+        description="Future-proof your online store with OmniCart AI. Intelligent automation that optimizes inventory, pricing, and customer experience 24/7."
         imageSrc=""
-        imageAlt="OmniCart_AI Dashboard"
+        imageAlt="OmniCart AI Dashboard"
         imagePosition="right"
         imageShadow="hard"
         textPosition="left"
@@ -224,11 +224,11 @@ export default function Page() {
       <LandingTestimonialReadMoreWrapper>
         <LandingTestimonialGrid
           title="Trusted by Leading E-Commerce Brands"
-          description="See how businesses are transforming their operations with OmniCart_AI autonomous optimization."
+          description="See how businesses are transforming their operations with OmniCart AI autonomous optimization."
           testimonialItems={[
             {
               name: 'Jennifer Walsh',
-              text: 'OmniCart_AI reduced our stockouts by 73% in the first month. The AI inventory agents are incredibly accurate at predicting demand.',
+              text: 'OmniCart AI reduced our stockouts by 73% in the first month. The AI inventory agents are incredibly accurate at predicting demand.',
               handle: '@jwalshecom',
               imageSrc: '',
               url: '#',
@@ -274,7 +274,7 @@ export default function Page() {
             },
             {
               name: 'Emily Foster',
-              text: 'OmniCart_AI predictive analytics identified a trend shift two weeks before our analysts did. That early warning saved our Q4 planning.',
+              text: 'OmniCart AI predictive analytics identified a trend shift two weeks before our analysts did. That early warning saved our Q4 planning.',
               handle: '@emilyfoster',
               imageSrc: '',
               url: '#',
@@ -320,9 +320,9 @@ export default function Page() {
         description="Everything you need to know about deploying autonomous AI for your e-commerce operations."
         faqItems={[
           {
-            question: 'What platforms does OmniCart_AI integrate with?',
+            question: 'What platforms does OmniCart AI integrate with?',
             answer:
-              'OmniCart_AI integrates with all major e-commerce platforms including Shopify, Shopify Plus, WooCommerce, Magento, BigCommerce, and custom solutions via our REST API. We also connect with marketplaces like Amazon, eBay, and Walmart.',
+              'OmniCart AI integrates with all major e-commerce platforms including Shopify, Shopify Plus, WooCommerce, Magento, BigCommerce, and custom solutions via our REST API. We also connect with marketplaces like Amazon, eBay, and Walmart.',
           },
           {
             question: 'How do the AI agents make decisions?',
@@ -332,7 +332,7 @@ export default function Page() {
           {
             question: 'Is my business data secure?',
             answer:
-              'Absolutely. OmniCart_AI is SOC 2 Type II certified with end-to-end encryption. We never sell or share your data. Our infrastructure runs on enterprise-grade cloud providers with 99.99% uptime SLA.',
+              'Absolutely. OmniCart AI is SOC 2 Type II certified with end-to-end encryption. We never sell or share your data. Our infrastructure runs on enterprise-grade cloud providers with 99.99% uptime SLA.',
           },
           {
             question: 'How quickly can I see results?',
@@ -340,7 +340,7 @@ export default function Page() {
               'Most customers see measurable improvements within the first two weeks. Inventory optimization and pricing adjustments begin immediately after deployment. Full AI model training for your specific business typically completes within 30 days.',
           },
           {
-            question: 'Do I need technical expertise to use OmniCart_AI?',
+            question: 'Do I need technical expertise to use OmniCart AI?',
             answer:
               'No coding or technical expertise required. Our platform is designed for business users with intuitive interfaces and guided setup. For custom integrations, our team provides full implementation support.',
           },
@@ -358,7 +358,7 @@ export default function Page() {
 
       <LandingSaleCtaSection
         title="Ready to Deploy Autonomous AI?"
-        description="Join thousands of e-commerce businesses optimizing with OmniCart_AI. Start your free trial today."
+        description="Join thousands of e-commerce businesses optimizing with OmniCart AI. Start your free trial today."
         withBackground
         withBackgroundGlow
         variant="primary"

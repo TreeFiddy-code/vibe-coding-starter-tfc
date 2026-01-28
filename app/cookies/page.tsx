@@ -13,7 +13,7 @@ export default function Cookies() {
           </h1>
 
           <p className="mt-6 md:text-xl">
-            At OmniCart_AI, we use cookies to enhance your experience,
+            At OmniCart AI, we use cookies to enhance your experience,
             personalize content, and analyze website traffic. Cookies help us
             understand how visitors interact with our platform, enabling us to
             improve our services and ensure a safer, more efficient experience
