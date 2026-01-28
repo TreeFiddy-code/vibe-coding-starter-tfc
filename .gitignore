@@ -43,3 +43,15 @@ yarn-error.log*
 .env.development.local
 .env.test.local
 .env.production.local
+
+# TypeScript build info
+tsconfig.tsbuildinfo
+
+# Playwright MCP
+.playwright-mcp/
+
+# Windows artifacts
+nul
+
+# Claude local settings
+.claude/settings.local.json
